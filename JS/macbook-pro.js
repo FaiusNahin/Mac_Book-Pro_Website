@@ -5,29 +5,29 @@ function getProductPrice(product, price) {
     calculateTotalCost();
 }
 
-// Get Total Amount
+// Get Product price Value for Total Amount
 function getProductPriceValue(productId) {
     const productPriceValue = document.getElementById(productId + '-cost');
     const productPrice = parseInt(productPriceValue.innerText);
     return productPrice;
 }
 
-// Calculate Ttoal Amount
+// Calculate Total Amount
 function calculateTotalCost() {
-    const memoryPrice = getProductPriceValue('memory');
-    const storagePrice = getProductPriceValue('storage');
-    const deliveryPrice = getProductPriceValue('delivery');
+    const memoryCost = getProductPriceValue('memory');
+    const storageCost = getProductPriceValue('storage');
+    const deliveryCost = getProductPriceValue('delivery');
 
-    const totalAmount = (memoryPrice + storagePrice + deliveryPrice) + 1299;
+    const totalAmount = (memoryCost + storageCost + deliveryCost) + 1299;
     const totalCost = document.getElementById('total-cost').innerText = totalAmount;
     document.getElementById('total').innerText = totalCost;
 }
 
 // For Promotions & Discount Calculation
 function getPromotion() {
-    const total = document.getElementById('total');
     const totalCostValue = document.getElementById('total-cost');
-    const totalCost = parseInt(totalCostValue.innerText)
+    const totalCost = parseInt(totalCostValue.innerText);
+    const total = document.getElementById('total');
 
     const promoValue = document.getElementById('promo-code');
     const promoCode = 'stevekaku';
@@ -43,4 +43,3 @@ function getPromotion() {
 document.getElementById('promo-check-btn').addEventListener('click', function () {
     getPromotion();
 })
-

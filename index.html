@@ -34,34 +34,34 @@
                         <!-- Memory -->
                         <div>
                             <h5 class="font-bold text-xl mt-10">Memory</h5>
-                            <button
+                            <button onclick="getProductPrice('memory', 0)"
                                 class="mt-2 py-1.5 px-3 border rounded-md border-gray-600 hover:bg-black hover:text-white focus:ou tline-none focus:ring-2 focus:ring-gray-500">8GB
                                 unified memory</button>
-                            <button
+                            <button onclick="getProductPrice('memory', 180)"
                                 class="mt-2 ml-2 py-1.5 px-3 border rounded-md border-gray-600 hover:bg-black hover:text-white focus:ou tline-none focus:ring-2 focus:ring-gray-500">16GB
                                 unified memory</button>
                         </div>
                         <!-- Storage -->
                         <div>
                             <h5 class="font-bold text-xl mt-10">Storage</h5>
-                            <button
+                            <button onclick="getProductPrice('storage', 0)"
                                 class="mt-2 py-1.5 px-3 border rounded-md border-gray-600 hover:bg-black hover:text-white focus:ou tline-none focus:ring-2 focus:ring-gray-500">256GB
                                 SSD storage</button>
-                            <button
+                            <button onclick="getProductPrice('storage', 100)"
                                 class="mt-2 ml-2 py-1.5 px-3 border rounded-md border-gray-600 hover:bg-black hover:text-white focus:ou tline-none focus:ring-2 focus:ring-gray-500">
                                 512GB SSD storage</button>
-                            <button
+                            <button onclick="getProductPrice('storage', 180)"
                                 class="mt-2 ml-2 py-1.5 px-3 border rounded-md border-gray-600 hover:bg-black hover:text-white focus:ou tline-none focus:ring-2 focus:ring-gray-500">
                                 1TB SSD storage</button>
                         </div>
                         <!-- Delivery -->
                         <div>
                             <h5 class="font-bold text-xl mt-10">Choose your delivery option</h5>
-                            <button
+                            <button onclick="getProductPrice('delivery', 0)"
                                 class="mt-2 py-1.5 px-3 border rounded-md border-gray-600 hover:bg-black hover:text-white focus:ou tline-none focus:ring-2 focus:ring-gray-500">Friday,
                                 Aug
                                 25 FREE Prime Delivery</button>
-                            <button
+                            <button onclick="getProductPrice('delivery', 20)"
                                 class="mt-2 ml-2 py-1.5 px-3 border rounded-md border-gray-600 hover:bg-black hover:text-white focus:ou tline-none focus:ring-2 focus:ring-gray-500">
                                 Friday, Aug
                                 21 Delivery Charge $20</button>
@@ -73,44 +73,46 @@
                         <!-- Mackbook Cost -->
                         <div class="flex justify-between px-2">
                             <h5 class="inline w-3/4 font-bold text-xl mt-10">Best Price</h5>
-                            <h5 class="inline  font-bold text-xl mt-10 w-1/5">$1299</h5>
+                            <h5 class="inline  font-bold text-xl mt-10 w-1/5">$<span id="product-cost">1299</span></h5>
                         </div>
                         <hr class="mt-2">
                         <!-- Extra Memory Cost -->
                         <div class="flex justify-between px-2">
                             <h5 class="inline font-bold text-xl mt-4">Extra Memory Cost</h5>
-                            <h5 class="inline font-bold text-xl mt-4 w-1/5">$0</h5>
+                            <h5 class="inline font-bold text-xl mt-4 w-1/5">$<span id="memory-cost">0</span></h5>
                         </div>
                         <hr class="mt-2">
                         <!-- Extra Storage Cost -->
                         <div class="flex justify-between px-2">
                             <h5 class="inline font-bold text-xl mt-4">Extra Storage Cost</h5>
-                            <h5 class="inline font-bold text-xl mt-4 w-1/5">$0</h5>
+                            <h5 class="inline font-bold text-xl mt-4 w-1/5">$<span id="storage-cost">0</span></h5>
                         </div>
                         <hr class="mt-2">
                         <!-- Delivery Charge -->
                         <div class="flex justify-between px-2">
                             <h5 class=" font-bold text-xl mt-4">Delivery Charge</h5>
-                            <h5 class=" font-bold text-xl mt-4 w-1/5">$0</h5>
+                            <h5 class=" font-bold text-xl mt-4 w-1/5">$<span id="delivery-cost">0</span></h5>
                         </div>
                         <hr class="mt-2 border-b-2 border-black">
-                        <!-- Total Cost -->
+                        <!-- Total Price -->
                         <div class=" flex justify-between px-2">
                             <h5 class=" font-bold text-xl mt-4">Total Price</h5>
-                            <h5 class=" font-bold text-xl mt-4 w-1/5">$1299</h5>
+                            <h5 class=" font-bold text-xl mt-4 w-1/5">$<span id="total-cost">1299</span></h5>
                         </div>
                         <hr class="mt-2">
                         <!-- Promo Code Part-->
                         <p class="font-medium mt-6">Add promo Code</p>
-                        <input class="border-2 mt-2 py-1.5 px-6 rounded-md" type="text">
-                        <button class="mt-2 bg-red-600 px-3 py-2 text-white rounded-md hover:bg-red-700">Apply</button>
+                        <input id="promo-code" class="border-2 mt-2 py-1.5 px-6 rounded-md" type="text">
+                        <button id="promo-check-btn"
+                            class="mt-2 bg-red-600 px-3 py-2 text-white rounded-md hover:bg-red-700">Apply</button>
                     </div>
                 </div>
             </div>
             <!-- Bottom part -->
+            <!-- Total Cost -->
             <div class="mt-8">
                 <hr class="w-3/5 mx-auto">
-                <h1 class="text-center text-4xl font-semibold mt-6">Total: $1299</h1>
+                <h1 class="text-center text-4xl font-semibold mt-6">Total: $<span id="total">1299</span></h1>
             </div>
         </section>
     </main>
